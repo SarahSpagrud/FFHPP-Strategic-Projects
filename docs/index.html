@@ -12,41 +12,47 @@
 <body>
   <header class="site-header" role="banner">
     <div class="container">
-      <!-- Optional: replace text with a small logo <img src="./assets/logo.svg" alt="Organization"> -->
-      <h1 class="site-title">Document Library</h1>
-      <p class="site-subtitle">A curated collection of unclassified materials for stakeholders.</p>
+      <div class="site-brand">
+        <!-- Replace with a small logo if desired: <img src="./assets/logo.svg" class="site-logo" alt="Organization"> -->
+        <div class="site-logo" aria-hidden="true">DL</div>
+        <div>
+          <h1 class="site-title">Document Library</h1>
+          <p class="site-subtitle">A curated collection of unclassified materials for stakeholders.</p>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="content" class="container" role="main">
-    <section aria-labelledby="about-title" class="intro">
-      <h2 id="about-title">About</h2>
+    <section class="section" aria-labelledby="about-title">
+      <p class="kicker">About</p>
+      <h2 id="about-title" style="margin-top:0;">Purpose</h2>
       <p>
-        This page provides official PDF documents for stakeholders. Materials are
-        unclassified and provided for reference. Share links directly with intended recipients.
+        This page provides official PDF documents for stakeholders. Materials are unclassified and provided for reference.
+        Please share links directly with intended recipients.
       </p>
     </section>
 
-    <section aria-labelledby="library-title" class="library">
-      <div class="library-header">
-        <h2 id="library-title">Available Documents</h2>
+    <section class="section" aria-labelledby="library-title">
+      <div class="section-header">
+        <div>
+          <p class="kicker" style="margin-top:0;">Library</p>
+          <h2 id="library-title" style="margin:0;">Available Documents</h2>
+        </div>
         <div class="tools">
           <label for="search" class="visually-hidden">Search documents</label>
-          <input id="search" type="search" placeholder="Search documents…" autocomplete="off" />
+          <input id="search" type="search" placeholder="Search documents…" autocomplete="off">
         </div>
       </div>
 
-      <!--
-        HOW TO ADD ITEMS:
-        Duplicate a <li class="doc"> block and update:
-          - data-title (for search)
-          - .doc-title (visible title)
-          - .doc-meta (optional: date/size)
-          - href to ./pdfs/<YourFile>.pdf
-          - download attribute encourages browser to download
+      <!-- HOW TO ADD:
+           Duplicate a <li class="doc"> block; update:
+             - data-title (for search)
+             - .doc-title (visible)
+             - .doc-meta (optional: date/version)
+             - href and data-link to ./pdfs/<YourFile>.pdf
       -->
       <ul id="doc-list" class="doc-list" aria-live="polite">
-        <!-- Example items (replace when you upload your PDFs) -->
         <li class="doc" data-title="Project Overview 2026">
           <div class="doc-body">
             <h3 class="doc-title">Project Overview (2026)</h3>
@@ -72,8 +78,9 @@
       <p class="empty-state" hidden>No documents match your search.</p>
     </section>
 
-    <section aria-labelledby="contact-title" class="contact">
-      <h2 id="contact-title">Contact</h2>
+    <section class="section" aria-labelledby="contact-title">
+      <p class="kicker" style="margin-top:0;">Contact</p>
+      <h2 id="contact-title" style="margin:0;">Project Team</h2>
       <p>For questions about these materials, please contact the project team.</p>
     </section>
   </main>
