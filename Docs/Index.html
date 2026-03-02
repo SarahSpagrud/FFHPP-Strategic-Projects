@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Document Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Hide from search engines -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <!-- Optional: replace text with a small logo <img src="./assets/logo.svg" alt="Organization"> -->
+      <h1 class="site-title">Document Library</h1>
+      <p class="site-subtitle">A curated collection of unclassified materials for stakeholders.</p>
+    </div>
+  </header>
+
+  <main id="content" class="container" role="main">
+    <section aria-labelledby="about-title" class="intro">
+      <h2 id="about-title">About</h2>
+      <p>
+        This page provides official PDF documents for stakeholders. Materials are
+        unclassified and provided for reference. Share links directly with intended recipients.
+      </p>
+    </section>
+
+    <section aria-labelledby="library-title" class="library">
+      <div class="library-header">
+        <h2 id="library-title">Available Documents</h2>
+        <div class="tools">
+          <label for="search" class="visually-hidden">Search documents</label>
+          <input id="search" type="search" placeholder="Search documents…" autocomplete="off" />
+        </div>
+      </div>
+
+      <!--
+        HOW TO ADD ITEMS:
+        Duplicate a <li class="doc"> block and update:
+          - data-title (for search)
+          - .doc-title (visible title)
+          - .doc-meta (optional: date/size)
+          - href to ./pdfs/<YourFile>.pdf
+          - download attribute encourages browser to download
+      -->
+      <ul id="doc-list" class="doc-list" aria-live="polite">
+        <!-- Example items (replace when you upload your PDFs) -->
+        <li class="doc" data-title="Project Overview 2026">
+          <div class="doc-body">
+            <h3 class="doc-title">Project Overview (2026)</h3>
+            <p class="doc-meta">PDF • v1.0 • January 2026</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+            <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+          </div>
+        </li>
+
+        <li class="doc" data-title="Stakeholder Briefing Note Fisheries">
+          <div class="doc-body">
+            <h3 class="doc-title">Stakeholder Briefing Note</h3>
+            <p class="doc-meta">PDF • v1.0 • February 2026</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn btn-primary" href="./pdfs/Stakeholder_Briefing_Note.pdf" download>Download</a>
+            <button class="btn btn-ghost copy-link" data-link="./pdfs/Stakeholder_Briefing_Note.pdf">Copy link</button>
+          </div>
+        </li>
+      </ul>
+      <p class="empty-state" hidden>No documents match your search.</p>
+    </section>
+
+    <section aria-labelledby="contact-title" class="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p>For questions about these materials, please contact the project team.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Document Library • Unclassified materials • For stakeholder distribution</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
