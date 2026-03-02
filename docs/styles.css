@@ -59,17 +59,14 @@ a:hover { text-decoration: underline; }
 
 /* ---------------- Header ---------------- */
 
-.site-header {
-  /* Banner image */
-  background:
-    linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), /* dark overlay so text stays readable */
-    url("./assets/banner.jpg") center/cover no-repeat;
 
+.site-header{
+  background: linear-gradient(160deg, var(--brand-deep) 0%, var(--brand) 60%, var(--brand-acc) 120%);
   color: #fff;
-  padding: 3.5rem 0 2.8rem;
+  padding: 3.1rem 0 2.4rem;
   box-shadow: var(--shadow);
-  position: relative;
 }
+
 .site-brand{
   display: flex; align-items: center; gap: .85rem;
 }
