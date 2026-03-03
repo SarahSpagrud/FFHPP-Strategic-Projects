@@ -64,10 +64,14 @@ a:hover { text-decoration: underline; }
   display: flex; align-items: center; gap: .85rem;
 }
 .site-logo{
-  width: 10px; height: 10px; border-radius: 8px;
+  width: 40px; height: 40px; border-radius: 8px;
   background: color-mix(in srgb, var(--brand-acc) 30%, #ffffff);
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 700; color: var(--brand-deep);
+}
+img.site-logo-img {
+  height: 40px !important;
+  width: auto !important;
 }
 .site-title{
   margin: 0;
