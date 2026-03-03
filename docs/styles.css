@@ -71,7 +71,7 @@ a:hover { text-decoration: underline; }
   display: flex; align-items: center; gap: .85rem;
 }
 .site-logo{
-  width: 20px; height: 20px; border-radius: 8px;
+  width: 10px; height: 10px; border-radius: 8px;
   background: color-mix(in srgb, var(--brand-acc) 30%, #ffffff);
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 700; color: var(--brand-deep);
